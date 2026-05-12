@@ -1,0 +1,501 @@
+/* ================================================= */
+/* AJOUTS FINAUX style.css */
+/* PARTIE 1 */
+/* ================================================= */
+
+/* ================================================= */
+/* POPUP NIVEAUX */
+/* ================================================= */
+
+.level-popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.75);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2000;
+padding:20px;
+}
+
+.level-box{
+width:100%;
+max-width:420px;
+background:#091224;
+border-radius:35px;
+padding:30px;
+text-align:center;
+border:1px solid rgba(255,140,0,0.2);
+animation:popupShow 0.3s ease;
+}
+
+.level-box h2{
+margin-bottom:25px;
+font-size:28px;
+}
+
+.level-item{
+padding:18px;
+border-radius:18px;
+margin-bottom:15px;
+font-weight:bold;
+font-size:18px;
+}
+
+.bronze-level{
+background:rgba(205,127,50,0.15);
+border:1px solid #cd7f32;
+color:#cd7f32;
+}
+
+.silver-level{
+background:rgba(192,192,192,0.12);
+border:1px solid silver;
+color:silver;
+}
+
+.gold-level{
+background:rgba(255,215,0,0.12);
+border:1px solid gold;
+color:gold;
+}
+
+.diamond-level{
+background:rgba(0,255,255,0.12);
+border:1px solid cyan;
+color:cyan;
+}
+
+#closeLevelPopup{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+background:linear-gradient(
+135deg,
+#ffb300,
+#ff6600
+);
+color:white;
+font-size:17px;
+font-weight:bold;
+margin-top:10px;
+}
+
+/* ================================================= */
+/* CONTACT */
+/* ================================================= */
+
+.contact-popup{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.7);
+display:flex;
+justify-content:center;
+align-items:center;
+z-index:2000;
+padding:20px;
+}
+
+.contact-box{
+width:100%;
+max-width:400px;
+background:#091224;
+border-radius:35px;
+padding:30px;
+text-align:center;
+}
+
+.contact-box h2{
+margin-bottom:20px;
+font-size:28px;
+}
+
+.contact-warning{
+background:rgba(255,140,0,0.08);
+border:1px solid rgba(255,140,0,0.2);
+padding:16px;
+border-radius:18px;
+line-height:1.6;
+margin-bottom:20px;
+color:orange;
+}
+
+.contact-email{
+height:60px;
+border-radius:18px;
+background:rgba(255,255,255,0.05);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:18px;
+font-weight:bold;
+margin-bottom:20px;
+word-break:break-word;
+}
+
+.close-contact{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+background:#ff6600;
+color:white;
+font-size:17px;
+font-weight:bold;
+}
+
+/* ================================================= */
+/* ANIMATION */
+/* ================================================= */
+
+@keyframes popupShow{
+
+from{
+transform:scale(0.8);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+/* ================================================= */
+/* AJOUTS FINAUX style.css */
+/* PARTIE 2 */
+/* ================================================= */
+
+/* ================================================= */
+/* MODALS SERVICES */
+/* ================================================= */
+
+.service-modal{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.75);
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:2500;
+}
+
+.service-box{
+width:100%;
+max-width:430px;
+background:#091224;
+border-radius:35px;
+padding:30px;
+animation:popupShow 0.3s ease;
+border:1px solid rgba(255,140,0,0.15);
+}
+
+.service-box h2{
+font-size:28px;
+margin-bottom:25px;
+text-align:center;
+}
+
+.service-box input{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+padding:0 18px;
+background:rgba(255,255,255,0.06);
+color:white;
+font-size:16px;
+margin-bottom:18px;
+outline:none;
+}
+
+.service-box input::placeholder{
+color:#bdbdbd;
+}
+
+.service-box p{
+margin-bottom:15px;
+line-height:1.6;
+text-align:center;
+}
+
+.service-box h3{
+text-align:center;
+margin-bottom:20px;
+color:#00ff99;
+font-size:22px;
+}
+
+.close-service{
+width:100%;
+height:58px;
+border:none;
+border-radius:18px;
+background:linear-gradient(
+135deg,
+#ffb300,
+#ff6600
+);
+color:white;
+font-size:17px;
+font-weight:bold;
+}
+
+/* ================================================= */
+/* RECEVOIR */
+/* ================================================= */
+
+.receive-id-box{
+height:65px;
+border-radius:20px;
+background:rgba(255,140,0,0.08);
+border:1px solid rgba(255,140,0,0.2);
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:20px;
+font-weight:bold;
+color:orange;
+margin-bottom:20px;
+}
+
+/* ================================================= */
+/* SCANNER */
+/* ================================================= */
+
+.scan-animation{
+width:220px;
+height:220px;
+border-radius:30px;
+border:2px solid rgba(255,140,0,0.3);
+margin:0 auto 25px;
+position:relative;
+overflow:hidden;
+background:rgba(255,255,255,0.03);
+}
+
+.scan-animation::before{
+content:'';
+position:absolute;
+left:0;
+right:0;
+height:4px;
+background:orange;
+box-shadow:0 0 20px orange;
+animation:scanMove 2s linear infinite;
+}
+
+@keyframes scanMove{
+
+0%{
+top:0;
+}
+
+100%{
+top:100%;
+}
+
+}
+
+/* ================================================= */
+/* CONVERTIR */
+/* ================================================= */
+
+.payment-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+margin-bottom:22px;
+}
+
+.pay-btn{
+height:95px;
+border:none;
+border-radius:24px;
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,140,0,0.15);
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:10px;
+font-size:15px;
+font-weight:bold;
+}
+
+.pay-btn img{
+width:40px;
+height:40px;
+object-fit:contain;
+background:white;
+padding:4px;
+border-radius:12px;
+}
+/* ================================================= */
+/* AJOUTS FINAUX style.css */
+/* PARTIE 3 FINALE */
+/* ================================================= */
+
+/* ================================================= */
+/* MODE CLAIR */
+/* ================================================= */
+
+body.light .level-box,
+body.light .contact-box,
+body.light .service-box,
+body.light .quote-box{
+background:white;
+color:#111;
+}
+
+body.light .service-box input,
+body.light .profile-card input{
+background:#f1f1f1;
+color:#111;
+}
+
+body.light .service-box input::placeholder,
+body.light .profile-card input::placeholder{
+color:#666;
+}
+
+body.light .pay-btn{
+background:#f4f4f4;
+color:#111;
+}
+
+body.light .receive-id-box{
+background:#fff3e0;
+}
+
+body.light .contact-email{
+background:#f4f4f4;
+color:#111;
+}
+
+body.light .action-btn{
+color:#111;
+}
+
+body.light .market-btn,
+body.light .social-btn{
+color:#111;
+background:#f4f4f4;
+}
+
+body.light .popup{
+color:white;
+}
+
+/* ================================================= */
+/* BOUTONS */
+/* ================================================= */
+
+button{
+cursor:pointer;
+transition:0.3s;
+}
+
+button:active{
+transform:scale(0.96);
+}
+
+/* ================================================= */
+/* HOVER */
+/* ================================================= */
+
+.reward-card:hover,
+.market-box:hover,
+.partner-card:hover,
+.pay-btn:hover{
+transform:translateY(-4px);
+transition:0.3s;
+}
+
+/* ================================================= */
+/* SCROLLBAR */
+/* ================================================= */
+
+::-webkit-scrollbar{
+width:6px;
+}
+
+::-webkit-scrollbar-thumb{
+background:orange;
+border-radius:20px;
+}
+
+/* ================================================= */
+/* RESPONSIVE FINAL */
+/* ================================================= */
+
+@media(max-width:430px){
+
+.level-box,
+.contact-box,
+.service-box{
+padding:24px;
+border-radius:28px;
+}
+
+.balance-main h2{
+font-size:58px;
+}
+
+.balance-main span{
+font-size:26px;
+}
+
+.cfa-live h3{
+font-size:24px;
+}
+
+.wheel{
+width:240px;
+height:240px;
+}
+
+.wheel::before{
+left:82px;
+}
+
+.wheel::after{
+left:65px;
+}
+
+.payment-grid{
+grid-template-columns:1fr;
+}
+
+.pay-btn{
+height:85px;
+}
+
+.action-circle{
+width:70px;
+height:70px;
+font-size:24px;
+}
+
+.profile-avatar{
+width:100px;
+height:100px;
+}
+
+.bottom-nav{
+height:88px;
+}
+
+.center-btn{
+width:78px;
+height:78px;
+}
+
+}
+
+/* ================================================= */
+/* FIN STYLE FINAL */
+/* ================================================= */
